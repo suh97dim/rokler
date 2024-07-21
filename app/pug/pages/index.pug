@@ -1,0 +1,380 @@
+extends /layout/page
+
+block title
+    title Главная страница
+
+block variables
+    - var page = 'index'
+block content
+    //- .main-banner
+    .container-fluid.main-banner 
+        .container
+            .row
+                .col-12
+                    p.par-20.c-dark-blue Акция проводится <span style="font-weight:600"> 22.07.2024 - 30.09.2024 </span>
+                    h1.c-dark-blue.mt-24 СЫРОМАНИЯ <br> 
+                        | от
+                        +img('logo-in-text.png','Войти','logo-in-text')
+                    p.par-26.c-dark-blue(style="font-weight:600") Главный приз - топовый смартфон!
+                //- .col-12.col-sm-6    
+                //-     +img('test.png','Войти','mr-10')
+            .row.mt-30.mt-md-50
+                .col-12.col-sm-auto
+                    button.btn.btn-blue(type="button") Зарегистрировать чек
+                .col-12.col-sm-auto.mt-12.mt-sm-0
+                    button.btn.btn-blue-border(type="button") Перейти в чат бот
+
+
+    .container-fluid.bgc-white-blue.py-60
+        .container
+            .row.how-do
+                .col-sm-12.text-center
+                    h2.c-white как выиграть приз?
+            .row.d-none.d-xl-flex
+                .col-md-5
+                    ul.nav.w-100.flex-column
+                        li.nav-item.align-self-start
+                            a(href='#tab-1' data-bs-toggle="tab").nav-link.active.how-win.step-1.w-100
+
+                                h4 Купи сыр ROKLER 
+                                p  на сайте roklerpromo.ru или через чат-бот в telegram @roklerpromo_bot
+                                .step 1
+                        li.nav-item
+                            a(href='#tab-2' data-bs-toggle="tab").nav-link.how-win.step-2.w-100.mt-20 
+                                h4  Регистрируй чек
+                                p  на сумму не менее 194 ₽ в магазинах на территории Омской и Новосибирской областей
+                                .step 2
+
+                        li.nav-item
+                            a(href='#tab-3' data-bs-toggle="tab").nav-link.how-win.step-3.w-100.mt-20 
+                                h4 Получай гарантированный приз <span style="font-size:32px">100  </span> руб.
+                                p  на счет мобильного телефона за регистрацию первого чека
+                                .step 3
+                        li.nav-item
+                            a(href='#tab-4' data-bs-toggle="tab").nav-link.how-win.step-4.w-100.mt-20 
+                                h4 ВЫИГРАЙ ТОПОВЫЙ СМАРТФОН
+                                p  или другие ценные призы
+                                .step 4
+                .col-md-7.d-flex.flex-column
+                    .how-win-desc.h-100
+                        .tab-content
+
+                            #tab-1.tab-pane.fade.active.show
+                                +img("icons/step-1.svg",'','step')
+                                .desc 
+                                    .header купи сыр rokler 
+                                    p.par-18.c-dark-blue.mt-30 на сумму не менее 194 ₽ в магазинах на территории Омской и Новосибирской областей
+                                +img("how-win-prize-1.png",'','prize')
+                            #tab-2.tab-pane.fade
+                                +img("icons/step-2.svg",'','step')
+                                .desc 
+                                    .header Регистрируй чек 
+                                    p.par-18.c-dark-blue.mt-30 на сайте roklerpromo.ru или через чат-бот в telegram @roklerpromo_bot
+                                    a.btn.btn-blue.mt-30(type="button") Перейти в чат бот
+                                +img("how-win-prize-3.png",'','prize')
+                            #tab-3.tab-pane.fade
+                                +img("icons/step-3.svg",'','step')
+                                .desc 
+                                    .header получай гарантированный приз <br> <span style="font-size:48px">100  </span> руб 
+                                    p.par-18.c-dark-blue.mt-30 на счет мобильного телефона за регистрацию первого чека 
+                                  
+                                +img("how-win-prize-4.png",'','prize')
+
+
+
+    //- .container-fluid.py-80.py-md-100.chat-bot-bg 
+    //-     .container 
+    //-         .row
+    //-             .col
+    //-                 .chat-bot
+    //-                     .row
+    //-                         .col-12.col-md-5 
+    //-                             h3 С чат-ботом <br> участвовать проще!
+    //-                         .col-12.col-md-7  
+    //-                             ol.list-group-numbered
+    //-                                 li.list-group-item.chat-bot__li  <strong>Покупайте </strong> «МахеевЪ» в ТС «Монетка» и сохраняйте чеки с «7» ноября 2023 года по «08» января 2024 года
+    //-                                 li.list-group-item.chat-bot__li  <strong>Сфотографируйте QR-код  </strong> чека и загрузите его на сайте или в чат-бот Telegram <a target="_blank" href="https://t.me/kupi_maheev_bot"> @kupi_maheev_bot. </a>
+    //-                                 li.list-group-item.chat-bot__li  <strong> Найти бот  </strong>  можно по названию @kupi_maheev_bot, отправить любое сообщение в бот и следовать дальнейшим инструкциям.
+
+
+    //- .container
+    //-     .row#prizes
+    //-         .col-sm-12.text-center
+    //-             h2.gold-lg Выигрывайте призы 
+    //-         .col-12.col-sm-6.col-xs-12.col-md-4
+    //-             .prize
+    //-                 +img('prize-1.png','','img-fluid','')
+    //-                 .prize-details  
+    //-                     h4.gold Ежедневные
+    //-                     ul
+    //-                         li.win-prize.par-16 Сертификат 1000 Р в магазин «Монетка»
+    //-         .col-12.col-sm-6.col-xs-12.col-md-4.mt-24.mt-sm-0
+    //-             .prize
+    //-                 +img('prize-2.png','','img-fluid','')
+    //-                 .prize-details 
+    //-                     h4.gold Еженедельные
+    //-                     ul
+    //-                         li.win-prize.par-16 Умная колонка Алиса
+    //-                         li.win-prize.par-16 Пароочиститель KARCHER SC 1 EasyFix
+    //-                         li.win-prize.par-16 Мини проектор
+    //-         .col-12.col-sm-6.col-xs-12.col-md-4.touch-center.mt-24.mt-md-0
+    //-             .prize 
+    //-                 +img('prize-3.png','','img-fluid','')
+    //-                 .prize-details 
+    //-                     h4.gold Ежемесячные
+    //-                     ul
+    //-                         li.win-prize.par-16 Телевизор Яндекс с Алисой диаг 43,
+    //-                         li.win-prize.par-16 Электрогриль Tefal Optigrill
+    //-                         li.win-prize.par-16 Кофемашина брендированная
+
+    //-         .col-12.mt-30.mt-md-70
+    //-             .main-prize
+    //-                 h3.gold.text-center Главный приз «Сертификат» на 
+    //-                 +img('main-prize-main.png','','')
+    //- .container-fluid.green-bg.py-60.py-lg-100#winner 
+    //-     .container
+    //-         .row 
+    //-             .col-sm-12
+    //-                 h2.gold-lg.text-center Победители
+    //-         .row 
+    //-             .col-12.col-lg-8
+    //-                 .winners-nav 
+    //-                     button.table-btn.active(data-prize) 
+    //-                         span.gold Ежедневный
+    //-                     button.table-btn(data-prize)  
+    //-                         span.gold Еженедельный
+    //-                     button.table-btn(data-prize)  
+    //-                         span.gold Суперприз
+    //-             .col-12.col-lg-4.my-30.m-lg-0
+    //-                 .winners-search 
+    //-                     button.winners-search__btn 
+    //-                     input( type="text" aria-controls="winners" id="search" placeholder="поиск по номеру телефона" class="mask-phone")
+    //-         .row
+    //-             .col
+
+    //-                 table#winners 
+    //-                     thead 
+    //-                         tr.trow.th-row 
+    //-                             th.th-column.th-data Дата розыгрыша
+    //-                             th.th-column.th-name Имя
+    //-                             th.th-column.th-city Город
+    //-                             th.th-column.th-phone Номер телефона
+    //-                     tbody 
+    //-                         tr.trow.td-row 
+    //-                             td.t-column.table-date 12.11.2022
+    //-                             td.t-column.table-name В******
+    //-                             td.t-column.table-city Санкт-Петербург
+    //-                             td.t-column.table-phone +7 (999) *** ** 99)
+    //-                         tr.trow.td-row 
+    //-                             td.t-column.table-date 12.11.2022
+    //-                             td.t-column.table-name В******
+    //-                             td.t-column.table-city Санкт-Петербург
+    //-                             td.t-column.table-phone +7 (999) *** ** 99)
+    //-                         tr.trow.td-row 
+    //-                             td.t-column.table-date 12.11.2022
+    //-                             td.t-column.table-name В******
+    //-                             td.t-column.table-city Санкт-Петербург
+    //-                             td.t-column.table-phone +7 (999) *** ** 99)
+    //-                         tr.trow.td-row 
+    //-                             td.t-column.table-date 12.11.2022
+    //-                             td.t-column.table-name В******
+    //-                             td.t-column.table-city Санкт-Петербург
+    //-                             td.t-column.table-phone +7 (999) *** ** 99)
+    //-                         tr.trow.td-row 
+    //-                             td.t-column.table-date 12.11.2022
+    //-                             td.t-column.table-name В******
+    //-                             td.t-column.table-city Санкт-Петербург
+    //-                             td.t-column.table-phone +7 (999) *** ** 99)
+    //-                         tr.trow.td-row 
+    //-                             td.t-column.table-date 12.11.2022
+    //-                             td.t-column.table-name В******
+    //-                             td.t-column.table-city Санкт-Петербург
+    //-                             td.t-column.table-phone +7 (999) *** ** 99)
+    //-                         tr.trow.td-row 
+    //-                             td.t-column.table-date 12.11.2022
+    //-                             td.t-column.table-name В******
+    //-                             td.t-column.table-city Санкт-Петербург
+    //-                             td.t-column.table-phone +7 (999) *** ** 99)
+    //-                         tr.trow.td-row 
+    //-                             td.t-column.table-date 12.11.2022
+    //-                             td.t-column.table-name В******
+    //-                             td.t-column.table-city Санкт-Петербург
+    //-                             td.t-column.table-phone +7 (999) *** ** 99)
+
+    .container.pt-40.pt-md-60#prizes
+        .row
+            .col-sm-12.mb-20.mb-md-40
+                h2.c-dark-blue.text-center Призы
+            .col-md-4
+                .blue-box.h-100
+                    h4.c-white.text-center гарантированный приз
+                    .row 
+                        .col.mt-10 
+                            +img('/prizes/guaranteed-prize.png','Логотип','every-day-prize mx-a ')
+                            p.par-16.c-white.mt-20.prize-text 100 рублей на&nbsp;мобильный телефон за&nbsp;регистрацию первого чека
+            .col-md-8.mt-20.mt-md-0
+                .blue-box.h-100
+                    h4.c-white.text-center еженедельные призы
+                    .row.mt-30
+                        .col-12.col-md-4
+                            +img('/prizes/everyday-prize-1.png','Логотип','every-day-prize mx-a ')
+                            p.par-16.c-white.mt-20.prize-text Электронный <br> сертификат в&nbsp;МВидео на&nbsp;3500 рублей
+                        .col-12.col-md-4.mt-40.mt-md-0
+                            +img('/prizes/everyday-prize-2.png','Логотип','every-day-prize mx-a  ')
+                            p.par-16.c-white.mt-0.mt-md-20.prize-text Электронный <br> сертификат в&nbsp;МВидео на&nbsp;1000 рублей
+                        .col-12.col-md-4.mt-40.mt-md-0
+                            +img('/prizes/everyday-prize-3.png','Логотип','every-day-prize mx-a ')
+                            p.par-16.c-white.mt-0.mt-md-20.prize-text Электронный <br> сертификат в&nbsp;МВидео на&nbsp;500 рублей
+            .col-md-12.mt-20.mt-md-20
+                .blue-box.h-100
+                    h4.c-white.text-center ежемесячные призы
+                    .row
+                        .col-12.col-md-4
+                            +img('/prizes/everymonth-prize-1.png','Логотип','main-prize mx-a ')
+                            p.par-16.c-white.mt-0.mt-md-20.text-center Мультиварка
+                        .col-12.col-md-4.mt-40.mt-md-0
+                            +img('/prizes/everymonth-prize-2.png','Логотип','main-prize mx-a  ')
+                            p.par-16.c-white.mt-0.mt-md-20.text-center Бокс для романтических вечеров
+                        .col-12.col-md-4.mt-40.mt-md-0
+                            +img('/prizes/everymonth-prize-3.png','Логотип','main-prize mx-a ')
+                            p.par-16.c-white.mt-0.mt-md-20.text-center Бокс для пикника
+            .col-md-12.mt-20.mt-md-20
+                .blue-box.h-100
+                    h4.c-white.text-center Главные призы
+                    .row
+                        .col-12.col-md-4
+                            +img('/prizes/everymonth-prize-2.png','Логотип','main-prize mx-a ')
+                            p.par-16.c-white.mt-0.mt-md-20.text-center Бокс для романтических вечеров
+                        .col-12.col-md-4.mt-40.mt-md-0
+                            +img('/prizes/main-prize-1.png','Логотип','main-prize mx-a  ')
+                            p.par-16.c-white.mt-0.mt-md-20.text-center iPhone 15 (256 Гб)
+                        .col-12.col-md-4.mt-40.mt-md-0
+                            +img('/prizes/main-prize-2.png','Логотип','main-prize mx-a ')
+                            p.par-16.c-white.mt-0.mt-md-20.text-center Бокс для кулинарных свершений
+
+    .container.my-60.my-lg-100
+        .blue-box
+            .row.py-40.py-md-60
+                .col12.mb-20.mb-md-40
+                    h2.c-white.text-center Победители
+                .col-12
+                    .winners-search.mx-a
+                        button.winners-search__btn 
+                        input.mx-a( type="text" aria-controls="winners" id="search" placeholder="Поиск по телефону" class="mask-phone")
+            .row
+                .col
+                    .winner-table__wrapper
+                        table#winners 
+                            thead 
+                                tr
+                                    th  Дата
+                                    th Имя участника
+                                    th Номер телефона
+                                    th E-mail
+                                    th Выигрыш
+                            tbody 
+                                tr
+                                    td 18.07.2024
+                                    td Андрей Ф.
+                                    td +7953***8546
+                                    td viol*********8@mail.ru
+                                    td 100 рублей на телефон
+                                tr
+                                    td 18.07.2024
+                                    td Андрей Ф.
+                                    td +7953***8546
+                                    td viol*********8@mail.ru
+                                    td 100 рублей на телефон
+                                tr
+                                    td 18.07.2024
+                                    td Андрей Ф.
+                                    td +7953***8546
+                                    td viol*********8@mail.ru
+                                    td 100 рублей на телефон
+                                tr
+                                    td 18.07.2024
+                                    td Андрей Ф.
+                                    td +7953***8546
+                                    td viol*********8@mail.ru
+                                    td 100 рублей на телефон
+                                tr
+                                    td 18.07.2024
+                                    td Андрей Ф.
+                                    td +7953***8546
+                                    td viol*********8@mail.ru
+                                    td 100 рублей на телефон
+                                tr
+                                    td 18.07.2024
+                                    td Андрей Ф.
+                                    td +7953***8546
+                                    td viol*********8@mail.ru
+                                    td 100 рублей на телефон
+                                tr
+                                    td 18.07.2024
+                                    td Андрей Ф.
+                                    td +7953***8546
+                                    td viol*********8@mail.ru
+                                    td 100 рублей на телефон
+
+
+
+    .container #faq
+        .row
+            .col-sm-12.mb-20.mb-md-40
+                h2.c-dark-blue.text-center Вопросы и ответы
+            .col-md-6.col-lg-8
+                #faqData.qa-wrapper
+                    .qa-wrapper-scroll 
+                        .qa-item.default-active.active
+                            .qa-title В какие сроки проводится Акция? 
+                            .qa-details Период покупки продукции Rokler, регистрации чека на подарки с 22 июля 2024 года 00:00:00 (московское время) по 30 сентября 2024 года 23:59:59 (московское время) включительно.
+
+                        .qa-item
+                            .qa-title Какой продукт необходимо купить, чтобы принять участие? 
+                            .qa-details
+                        .qa-item
+                            .qa-title До какого числа выдают призы 
+                            .qa-details
+                        .qa-item
+                            .qa-title В какие сроки проводится Акция?
+                            .qa-details
+                        .qa-item
+                            .qa-title Как я узнаю что стал участником акции?
+                            .qa-details
+                        .qa-item
+                            .qa-title Какие призы я могу получить за участие в акции?
+                            .qa-details
+                        .qa-item
+                            .qa-title Надо ли платить налоги с приза?
+                            .qa-details
+                        .qa-item
+                            .qa-title Какой продукт необходимо купить, чтобы принять участие? 
+                            .qa-details
+                        .qa-item
+                            .qa-title Какой продукт необходимо купить, чтобы принять участие? 
+                            .qa-details 
+            .col-md-6.col-lg-4
+                .contact-form
+                    h3.c-white не нашли ответ?
+                    p.par-16.c-white Напишите нам на почту и мы <br> поможем во всем разобраться!
+                    form(action="").row.needs-validation.mt-24(novalidate)
+                        .col-sm-12.mb-md-24.mb-12
+                            input(type="text" placeholder="ФИО" required ).form-control
+                            .invalid-feedback 
+                                .c-white Обязательное поле
+                        .col-sm-12.mb-md-24.mb-12
+                            input(type="email" placeholder="E-mail" required ).form-control
+                            .invalid-feedback 
+                                .c-white Обязательное поле
+                        .col-sm-12.mb-md-24.mb-12
+                            textarea(type="text" placeholder="Вопрос" required ).form-control
+                            .invalid-feedback 
+                                .c-white Обязательное поле
+                        .col-sm-12.mb-6
+                            label.checkbox.flex-wrap
+                                input(type="checkbox" required).radio-input.mr-10
+                                span.checkbox__text Я даю  <a href="#" class="label-text">согласие  </a>на обработку <br> моих персональных данных
+                                .invalid-feedback Обязательное поле
+                        .col-sm-12.mb-6
+                            button.btn.btn-yellow.w-100.mt-12(type="submit")  Зарегистрироваться   
+

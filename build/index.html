@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="msapplication-TileColor" content="undefined">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="msapplication-TileImage" content="">
+    <meta name="theme-color" content="undefined">
+    <meta name="msapplication-navbutton-color" content="undefined">
+    <meta name="apple-mobile-web-app-status-bar-style" content="undefined">
+    <meta name="description" content="undefined">
+    <title>Главная страница</title>
+    <link type="image/x-icon" href="favicon.ico" rel="icon">
+    <link type="image/svg+xml" href="#" rel="icon">
+    <link href="#" rel="apple-touch-icon">
+    <link href="#" color="undefined" rel="mask-icon">
+    <link type="text/css" href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/datepicker-bootstrap/datepicker.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/croppie/croppie.css" rel="stylesheet">
+    <link type="text/css" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet">
+    <link type="text/css" href="libs/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/fancybox/fancybox.css" rel="stylesheet">
+    <link type="text/css" href="css/main.min.css" rel="stylesheet">
+    <body></body>
+    <div class="o-h pos-r">
+      <header class="page-header">
+        <div class="container header-container"> 
+          <div class="row ai-c jc-sb">
+            <div class="col-auto d-xll-n">
+              <button class="hamburger js-hamburger collapsed" type="button" data-toggle="collapse" data-target=".page-header-menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+            </div>
+            <div class="col-auto"><a href="/"><img class="logo-img" src="img/logo.webp" alt="Логотип"/></a></div>
+            <div class="col-auto page-header-menu collapse">
+              <ul class="nav nav-header">
+                <li class="nav-item"><a class="nav-link-header" href="">Главная</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="">Правила</a></li>
+                <li class="nav-item"><a class="nav-link-header mt-100" href="#prizes">Призы</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="#winner">Победители</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="#faq">Вопросы и ответы</a></li>
+              </ul>
+            </div>
+            <div class="col-auto"><a class="header-link" type="button" data-bs-toggle="modal" data-bs-target="#modal-enter"><img class="mr-10" src="img/icons/user.svg" alt="Войти"/><span class="d-none d-md-inline pt-6">Войти</span></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container-fluid main-banner"> 
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p class="par-20 c-dark-blue">Акция проводится <span style="font-weight:600"> 22.07.2024 - 30.09.2024 </span></p>
+              <h1 class="c-dark-blue mt-24">
+                СЫРОМАНИЯ <br> от<img class="logo-in-text" src="img/logo-in-text.webp" alt="Войти"/>
+              </h1>
+              <p class="par-26 c-dark-blue" style="font-weight:600">Главный приз - топовый смартфон!</p>
+            </div>
+          </div>
+          <div class="row mt-30 mt-md-50">
+            <div class="col-12 col-sm-auto">
+              <button class="btn btn-blue" type="button">Зарегистрировать чек</button>
+            </div>
+            <div class="col-12 col-sm-auto mt-12 mt-sm-0">
+              <button class="btn btn-blue-border" type="button">Перейти в чат бот</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container py-40 py-md-60">
+        <div class="row">
+          <div class="col-sm-12 mb-20 mb-md-40">
+            <h2 class="c-dark-blue text-center">Призы</h2>
+          </div>
+          <div class="col-md-4">
+            <div class="blue-box h-100">
+              <h4 class="c-white text-center">гарантированный приз</h4>
+              <div class="row"> 
+                <div class="col mt-10"> <img class="every-day-prize mx-a " src="img//prizes/guaranteed-prize.webp" alt="Логотип"/>
+                  <p class="par-16 c-white mt-20 prize-text">100 рублей на&nbsp;мобильный телефон за&nbsp;регистрацию первого чека</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 mt-20 mt-md-0">
+            <div class="blue-box h-100">
+              <h4 class="c-white text-center">еженедельные призы</h4>
+              <div class="row mt-30">
+                <div class="col-12 col-md-4"><img class="every-day-prize mx-a " src="img//prizes/everyday-prize-1.webp" alt="Логотип"/>
+                  <p class="par-16 c-white mt-20 prize-text">Электронный <br> сертификат в&nbsp;МВидео на&nbsp;3500 рублей</p>
+                </div>
+                <div class="col-12 col-md-4 mt-40 mt-md-0"><img class="every-day-prize mx-a  " src="img//prizes/everyday-prize-2.webp" alt="Логотип"/>
+                  <p class="par-16 c-white mt-0 mt-md-20 prize-text">Электронный <br> сертификат в&nbsp;МВидео на&nbsp;1000 рублей</p>
+                </div>
+                <div class="col-12 col-md-4 mt-40 mt-md-0"><img class="every-day-prize mx-a " src="img//prizes/everyday-prize-3.webp" alt="Логотип"/>
+                  <p class="par-16 c-white mt-0 mt-md-20 prize-text">Электронный <br> сертификат в&nbsp;МВидео на&nbsp;500 рублей</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container py-40 py-md-60">
+        <div class="row">
+          <div class="col-sm-12 mb-20 mb-md-40">
+            <h2 class="c-dark-blue text-center">Вопросы и ответы</h2>
+          </div>
+          <div class="col-md-6 col-lg-8">
+            <div class="qa-wrapper" id="faqData">
+              <div class="qa-wrapper-scroll"> 
+                <div class="qa-item default-active active">
+                  <div class="qa-title">В какие сроки проводится Акция? </div>
+                  <div class="qa-details">Период покупки продукции Rokler, регистрации чека на подарки с 22 июля 2024 года 00:00:00 (московское время) по 30 сентября 2024 года 23:59:59 (московское время) включительно.</div>
+                </div>
+                <div class="qa-item">
+                  <div class="qa-title">Какой продукт необходимо купить, чтобы принять участие? </div>
+                  <div class="qa-details"></div>
+                </div>
+                <div class="qa-item">
+                  <div class="qa-title">До какого числа выдают призы </div>
+                  <div class="qa-details"></div>
+                </div>
+                <div class="qa-item">
+                  <div class="qa-title">В какие сроки проводится Акция?</div>
+                  <div class="qa-details"></div>
+                </div>
+                <div class="qa-item">
+                  <div class="qa-title">Как я узнаю что стал участником акции?</div>
+                  <div class="qa-details"></div>
+                </div>
+                <div class="qa-item">
+                  <div class="qa-title">Какие призы я могу получить за участие в акции?</div>
+                  <div class="qa-details"></div>
+                </div>
+                <div class="qa-item">
+                  <div class="qa-title">Надо ли платить налоги с приза?</div>
+                  <div class="qa-details"></div>
+                </div>
+                <div class="qa-item">
+                  <div class="qa-title">Какой продукт необходимо купить, чтобы принять участие? </div>
+                  <div class="qa-details"></div>
+                </div>
+                <div class="qa-item">
+                  <div class="qa-title">Какой продукт необходимо купить, чтобы принять участие? </div>
+                  <div class="qa-details"> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="contact-form">
+              <h3 class="c-white">не нашли ответ?</h3>
+              <p class="par-16 c-white">Напишите нам на почту и мы <br> поможем во всем разобраться!</p>
+              <form class="row needs-validation mt-24" action="" novalidate>
+                <div class="col-sm-12 mb-md-24 mb-12">
+                  <input class="form-control" type="text" placeholder="ФИО" required>
+                  <div class="invalid-feedback"> 
+                    <div class="c-white">Укажите ФИО</div>
+                  </div>
+                </div>
+                <div class="col-sm-12 mb-md-24 mb-12">
+                  <input class="form-control" type="email" placeholder="E-mail" required>
+                  <div class="invalid-feedback"> 
+                    <div class="c-white">Укажите e-mail</div>
+                  </div>
+                </div>
+                <div class="col-sm-12 mb-md-24 mb-12">
+                  <textarea class="form-control" type="text" placeholder="Вопрос" required></textarea>
+                  <div class="invalid-feedback"> 
+                    <div class="c-white">Укажите вопрос</div>
+                  </div>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Я даю  <a href="#" class="label-text">согласие  </a>на обработку <br> моих персональных данных</span>
+                    <div class="invalid-feedback">Подтвердите согласие с пользовательским соглашением и политикой конфиденциальности</div>
+                  </label>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <button class="btn btn-white w-100 mt-12" type="submit"> Зарегистрироваться   </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container py-60 py-lg-80">
+        <div class="row"> 
+          <div class="col-12 col-md-6 col-xl-4 d-flex align-items-center justify-content-center flex-column mt-40 mt-xl-0">
+            <h5 class="text-center c-dark-blue"> номер Горячей линии</h5><a class="text-center footer-link-lg mt-2" href="#">8-800-333-40-17</a>
+          </div>
+          <div class="col-12 col-md-12 col-xl-4 order-first order-xl-0"><a href="/"><img class="logo-img mx-a d-block" src="img/logo.webp" alt="Логотип"/></a></div>
+          <div class="col-12 col-md-6 col-xl-4 d-flex align-items-center justify-content-center flex-column mt-40 mt-xl-0">
+            <h5 class="text-center c-dark-blue">  Почта для обратной связи</h5><a class="text-center footer-link-lg mt-2" href="#">info@roklerpromo.ru</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 d-flex align-items-center justify-content-center mt-40">
+            <div class="social-icons"> <a href="#" target="_blank"><img src="img/icons/tg.svg" alt="Youtube"/></a><a href="#" target="_blank"><img src="img/icons/vk.svg" alt="Youtube"/></a><a href="#" target="_blank"><img src="img/icons/odnoklassniki.svg" alt="Youtube"/></a></div>
+          </div>
+        </div>
+        <div class="row mt-24 mt-lg-40">
+          <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center mt-24 mt-lg-0"><a class="footer-link" href="#">Полные правила акции</a></div>
+          <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center mt-24 mt-lg-0"> <a class="footer-link" href="#">Согласие на обработку персональных данных</a></div>
+          <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center mt-24 mt-lg-0"> <a class="footer-link" href="#">Политика конфиденциальности  </a></div>
+          <div class="col-12 mt-24 mt-lg-40">
+            <p class="par-12 c-white-blue text-center">Акция проводится в период с 22.07.2024 по 30.09.2024 на территории Омской и Новосибирской областей. Организатором акции является ООО «Ай-Экшн». Информация об организаторе акции, правилах её проведения, товарах — участниках, количестве призов, сроках, месте и порядке их получения размещена на сайте roklerpromo.ru</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-enter">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title text-center">Вход</div>
+              <form class="row needs-validation mt-40 mt-md-50" novalidate>
+                <div class="col-12 mb-12 mb-md-24">
+                  <input class="form-control mask-phone" placeholder="Номер телефона" required>
+                  <div class="invalid-feedback">Введите номер телефона</div>
+                </div>
+                <div class="col-12 mb-12 mb-md-24">
+                  <input class="form-control" type="password" placeholder="Пароль" required>
+                  <div class="invalid-feedback">Введите пароль</div><a class="js-change-modal modal-link text-end mt-30" href="#modal-recovery">Забыли пароль? </a>
+                </div>
+                <div class="col-12 mt-30 mt-md-50">
+                  <button class="btn btn-white w-100 px-0" type="submit"> Войти </button>
+                </div>
+              </form>
+              <div class="row mt-30 mt--md-60">
+                <div class="col-12"> 
+                  <p class="par-20 text-center c-white">Еще нет аккаунта? </p>
+                </div><a class="js-change-modal modal-link text-center mt-24" href="#modal-reg">Зарегистрироваться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-reg">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title text-center">Регистрация</div>
+              <form class="row needs-validation mt-40 mt-md-50" novalidate>
+                <div class="col-sm-6 mb-12 mb-md-24">
+                  <input class="form-control" type="text" placeholder="Фамилия" required>
+                  <div class="invalid-feedback">Введите фамилию</div>
+                </div>
+                <div class="col-sm-6 mb-12 mb-md-24">
+                  <input class="form-control" type="text" placeholder="Имя" required>
+                  <div class="invalid-feedback">Введите имя</div>
+                </div>
+                <div class="col-sm-6 mb-12 mb-md-24">
+                  <input class="form-control" type="text" placeholder="Дата рождения" data-toggle="datepicker" required>
+                  <div class="invalid-feedback">Введите дату рождения</div>
+                </div>
+                <div class="col-sm-6 mb-12 mb-md-24">
+                  <input class="form-control" type="text" placeholder="Город проживания" required>
+                  <div class="invalid-feedback">Введите дату город проживания</div>
+                </div>
+                <div class="col-sm-6 mb-12 mb-md-24">
+                  <input class="form-control mask-phone" placeholder="Номер телефона" required>
+                  <div class="invalid-feedback">Введите номер телефона</div>
+                </div>
+                <div class="col-sm-6 mb-12 mb-md-24">
+                  <input class="form-control" type="email" placeholder="E-mail" required>
+                  <div class="invalid-feedback">Введите E-mail</div>
+                </div>
+                <div class="col-sm-12 mb-6 mt-24">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Я даю  <a href="#" class="label-text">согласие  </a>на обработку моих персональных данных</span>
+                    <div class="invalid-feedback">Подтвердите согласие с пользовательским соглашением и политикой конфиденциальности</div>
+                  </label>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Я ознакомлен и согласен c <a href="#" class="label-text">пользовательским соглашением </a> и <a href="#" class="label-text">политикой конфиденциальности </a></span>
+                    <div class="invalid-feedback">Подтвердите согласие с правилами акции</div>
+                  </label>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Я ознакомлен и согласен с <a href="#" class="label-text">правилами акции </a> </span>
+                    <div class="invalid-feedback">Подтвердите согласие на обработку персональных данных</div>
+                  </label>
+                </div>
+                <div class="col-sm-12 mb-6">
+                  <label class="checkbox">
+                    <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text c-white">Мне уже есть 18 лет </span>
+                    <div class="invalid-feedback">Подтвердите возраст</div>
+                  </label>
+                </div>
+                <div class="col-12 mt-30 mt-md-50">
+                  <button class="btn btn-white w-100 mx-a" type="submit">зарегистрироваться</button>
+                </div>
+                <div class="col-12 mt-30"><a class="js-change-modal modal-link text-center" href="#modal-enter"><span class="gold">Войти</span></a></div>
+                <div class="col-12 mt-30"><a class="js-change-modal modal-link text-center" href="#modal-recovery"><span class="gold">восстановить пароль</span></a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-recovery">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title-sm">Восстановление пароля</div>
+              <form class="row needs-validation" novalidate>
+                <div class="col-12 mb-12 mb-md-24">
+                  <input class="form-control mask-phone" placeholder="Номер телефона" required>
+                  <div class="invalid-feedback">Введите номер телефона</div>
+                </div>
+                <div class="col-12 mb-12 mb-md-24">
+                  <button class="btn-lk btn-red w-100 px-0" type="submit"> <span class="gold">Восстановить пароль</span></button>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-12"> </div><a class="js-change-modal modal-link-lg text-center" href="#modal-reg"><span class="gold">Войти в кабинет</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-success-reg">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h4 class="text-center"><span class="gold">Вы зарегистрировались <br> в акции!</span></h4>
+              <div class="row mt-12">
+                <div class="col-12"> 
+                  <div class="par-16 text-center c-green-middle fw-bolder">На указанный вами телефон (79008987676) отправлен пароль для доступа в личный кабинет</div>
+                </div>
+              </div>
+              <div class="row mt-24">
+                <div class="col-12"> 
+                  <button class="btn-lk btn-red w-100 px-0 js-change-modal modal-link-lg text-center" href="#modal-enter" type="button"><span class="gold">Войти в кабинет</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-thanks">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <div class="modal-title">Спасибо!</div>
+              <div class="row mt-12">
+                <div class="col-12"> 
+                  <div class="par-16 text-center c-green-middle fw-bolder">На указанный номер телефона отправлен новый пароль</div>
+                </div>
+              </div>
+              <div class="row mt-24">
+                <div class="col-12"> 
+                  <button class="btn-lk btn-red w-100 px-0 js-change-modal modal-link-lg text-center" href="#modal-enter" type="button"><span class="gold">Войти в кабинет</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="modal-fiskal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
+              </button>
+              <h4 class="text-center"><span class="gold">Фискальные знаки на чеке</span><img class="img-fluid mt-24" src="img/fiskal.webp" alt=""/>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="libs/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.ru-RU.js"></script>
+    <script src="libs/bootstrap-fileinput/js/locales/ru.js"></script>
+    <script src="libs/DataTables/datatables.min.js"></script>
+    <script src="libs/croppie/croppie.min.js"></script>
+    <script src="libs/jquery.maskedinput.min.js"></script>
+    <script src="libs/parallax/tweenmax.min.js"></script>
+    <script src="libs/parallax/jquery-parallax.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    <script src="libs/fancybox/fancybox.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+</html>

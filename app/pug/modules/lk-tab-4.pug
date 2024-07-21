@@ -1,0 +1,106 @@
+.row 
+    .col
+        .lk-attention
+            +img("icons/attention.svg" )
+            p.par-16 Персональные данные требуются в соответствии законом для уплаты налогов при получении призов на общую сумму свыше 4000 рублей. Налог оплачивает Организатор. <br>Если общая сумма призов составляет меньше 4000 рублей — добавлять персональные данные не обязательно. Для получения призов на сумму более 4000 рублей предоставление персональных данных является обязательным.
+
+
+
+.row.mt-40.mt-md-60 
+    .col 
+        h2.text-center.c-white Персональные данные
+.row.mt-24
+    .col 
+        .lk-form 
+            form.row.needs-validation(novalidate)
+                .col-sm-6.mb-12.mb-md-24
+                    input(type="text" placeholder="Фамилия" required value="Иванов").form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-6.mb-12.mb-md-24
+                    input(type="text" placeholder="Имя" required value="Дмитрий").form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-6.mb-12.mb-md-24
+                    input(type="text" placeholder="Отчество" required value="Алексеевич").form-control
+                    .invalid-feedback Обязательное поле
+
+                .col-sm-6.mb-12.mb-md-24
+                    input(type="text" placeholder="Дата рождения" data-toggle="datepicker" required value="08.22.2023").form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-6.mb-12.mb-md-24
+                    input( placeholder="Номер телефона" required value="88805553535").form-control.mask-phone
+                    .invalid-feedback Обязательное поле
+                .col-sm-6.mb-12.mb-md-24
+                    input(type="email" placeholder="E-mail" required value="user@mail.ru").form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-12.mb-12.mb-md-24
+                    button.btn.btn-white.w-100.mx-a(type="submit") 
+                        span.gold Сохранить данные
+
+.row.mt-40.mt-md-80 
+    .col
+        h2.text-center.c-white Данные для уплаты налогов:
+        .lk-form.mt-30
+            p.par-26.c-white.text-center Первая страница паспорта
+            form.row.needs-validation.mt-40(novalidate)
+                .col-sm-6.mb-12.mb-md-24
+                    input(type="number" placeholder="Серия" required ).form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-6.mb-12.mb-md-24
+                    input(type="number" placeholder="Номер" required ).form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-6.mb-12.mb-md-24
+                    input(type="text" placeholder="Дата выдачи" data-toggle="datepicker" required).form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-6.mb-32.position-relative
+                    span.info-icon-absolut.ml-16(data-bs-toggle="tooltip" data-bs-placement="bottom" title="Заполнять в точности так, как указано в паспорте, включая заглавные буквы и пробелы")
+                        +img('icons/info.svg','' ,'','' )
+                    input(type="text" placeholder="Кем выдан" required ).form-control
+                    .invalid-feedback Обязательное поле
+
+                p.par-26.c-white.text-center.mb-40 Адрес прописки
+                    span.info-icon.ml-16(data-bs-toggle="tooltip" data-bs-placement="bottom" title="Адрес из актуальной прописки или временной регистрации")
+                        +img('icons/info.svg','' ,'','' )
+
+                .col-sm-6.mb-12.mb-md-24
+                    input(type="text" placeholder="Населенный пункт" required ).form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-6.mb-12.mb-md-24
+                    input(type="text" placeholder="Улица" required ).form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-4.mb-12.mb-md-24
+                    input(type="number" placeholder="Номер " required ).form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-4.mb-12.mb-md-24
+                    input(type="number" placeholder="Номер строения" required ).form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-4.mb-12.mb-md-24
+                    input(type="number" placeholder="Номер квартиры" required ).form-control
+                    .invalid-feedback Обязательное поле
+                .col-sm-6.mb-12.mb-md-24
+                    .upload-one
+                        .file-subtitle Фото паспорта, 1 разворот:
+                            span.info-icon.ml-16(data-bs-toggle="tooltip" data-bs-placement="bottom" title="Фотография должна содержать страницу с фото, информацию об органе, выдавшем паспорт, дате выдачи документа, а также серию и номер паспорта. Фото в паспорте необходимо скрыть любым доступным образом.")
+                                +img('icons/info.svg','' ,'','' )
+                        <input invalid-custom="file-1" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                        .invalid-feedback(invalid-customs="file-1") Загрузите фото
+                .col-sm-6.mb-12.mb-md-24
+                    .upload-one
+                        .file-subtitle Фото паспорта, прописка:
+                            span.info-icon.ml-16(data-bs-toggle="tooltip" data-bs-placement="bottom" title="На фото должна быть информация об актуальной регистрации и серия и номер паспорта внизу страницы.")
+                                +img('icons/info.svg','' ,'','' )
+                        <input invalid-custom="file-2" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                .col-sm-6.mb-12.mb-md-24
+                    .upload-one
+                        .file-subtitle Фото ИНН:
+                            span.info-icon.ml-16(data-bs-toggle="tooltip" data-bs-placement="bottom" title="Можно приложить фотографию оригинала свидетельства ИНН физического лица или скриншот с сайта ФНС с отображением фамилии, имени, отчества и номера ИНН")
+                                +img('icons/info.svg','' ,'','' )
+                        <input invalid-custom="file-3"  class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
+                        .invalid-feedback(invalid-customs="file-3") Загрузите фото
+                .col-sm-6.mb-12.mb-md-24.d-flex.align-items-end
+                    input(type="number" placeholder="ИНН" required).form-control
+                    .invalid-feedback.ml-16 Обязательное поле
+
+                .col-sm-12.mb-12.mb-md-24
+                    button.btn.btn-white.w-100.mx-a(type="submit") 
+                        span.gold Сохранить данные
+
