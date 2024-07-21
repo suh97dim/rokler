@@ -18,8 +18,8 @@ $(function () {
   // маска для номера телефона
   $(".mask-phone").mask("+7 (999) 999-99-99");
   $.fn.DataTable.ext.pager.numbers_length = 5;
-  var oTable = $('#winners').DataTable({ ordering: false, bLengthChange: false, info: false, pageLength: 6, pagingType: "numbers" });
-  $('#my-sales,#appl').DataTable({
+
+  $('#registered-receipts,#appl,#winners ').DataTable({
     ordering: false, bLengthChange: false, filter: false, info: false, pageLength: 6, pagingType: "simple_numbers", language: {
       paginate: {
         previous: '<',
@@ -27,6 +27,8 @@ $(function () {
       }
     }
   });
+
+  
 
   $(".qa-title").click(function () {
     if ($('.qa-title').is(':visible')) {
@@ -55,15 +57,15 @@ $(function () {
       $('.page-header-menu').removeClass('show');
     }
   });
-  $('.navigation-list--link').click(function () {
-    $(this).parent().parent().parent().removeClass('show');
-    $('.hamburger').addClass('collapsed');
-  });
-  $('.banner-form-control').focus(function () {
-    $(this).parent().addClass('focus');
-  }).blur(function () {
-    $(this).parent().removeClass('focus');
-  });
+  // $('.navigation-list--link').click(function () {
+  //   $(this).parent().parent().parent().removeClass('show');
+  //   $('.hamburger').addClass('collapsed');
+  // });
+  // $('.banner-form-control').focus(function () {
+  //   $(this).parent().addClass('focus');
+  // }).blur(function () {
+  //   $(this).parent().removeClass('focus');
+  // });
 
   $(".js-change-modal").on("click", function (e) {
     e.preventDefault();
@@ -73,9 +75,11 @@ $(function () {
       $(id).modal("show");
     }, 1000);
   });
+
   // Маска для даты
   $('[data-toggle="datepicker"]').mask("99.99.9999");
   // bootstrap datepicker
+
   $('[data-toggle="datepicker"], .datepicker').datepicker({
     autoHide: true,
     zIndex: 2048,
@@ -84,54 +88,12 @@ $(function () {
   });
 
 
-  //загрузка фото и инициализация croppier,
-  $('#file-receipt ').on('input', function (e) {
-    //инициализация с display none не проходит
-    $('#step-2').css({ display: 'block' })
-    var file = document.getElementById('file-receipt').files[0];
-    var reader = new FileReader();
-    reader.onload = function (e) {
-      var basic = $('#img-crop').croppie({
-        viewport: { width: 550, height: 300 },
-        boundary: { width: 570, height: 320 },
-        showZoomer: true,
-        mouseWheelZoom: 'ctrl'
-      });
-      basic.croppie('bind', {
-        url: e.target.result,
-
-      });
-      // basic.croppie('result', 'html').then(function (html) {
-      // });;
-
-    }
-    //
-    reader.readAsDataURL(file);
-    $('#step-1').fadeOut('slow');
-    setTimeout(function () {
-      $('#step-2').animate({ opacity: 1 })
-    }, 1000);
-  })
 
 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
 
-  // валидация формы type = file, из-за вложенности подсказка не появлялась
-  $('#nalog').click(function (e) {
-    $('.file').each(function () {
-      if ($(this).val() == '') {
-        let a = ($(this).attr('invalid-custom'))
-        let b = $("div").find("[invalid-customs='" + a + "']");
-        $(b).css('display', 'block');
-      } else {
-        let a = ($(this).attr('invalid-custom'))
-        let b = $("div").find("[invalid-customs='" + a + "']");
-        $(b).css('display', 'none');
-      }
-    });
-  })
 
 
 
@@ -178,7 +140,7 @@ Array.prototype.slice.call(forms)
 
 
 
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-  })
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})

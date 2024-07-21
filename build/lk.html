@@ -32,18 +32,19 @@
             <div class="col-auto"><a href="/"><img class="logo-img" src="img/logo.webp" alt="Логотип"/></a></div>
             <div class="col-auto page-header-menu collapse">
               <ul class="nav nav-header">
+                <li class="nav-item"><a class="nav-link-header" href="/index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link-header" href="">Правила</a></li>
                 <li class="nav-item"><a class="nav-link-header mt-100" href="/index.html#prizes">Призы</a></li>
-                <li class="nav-item"><a class="nav-link-header" href="/index.html#winner">Победители</a></li>
+                <li class="nav-item"><a class="nav-link-header" href="/index.html#winners">Победители</a></li>
                 <li class="nav-item"><a class="nav-link-header" href="/index.html#faq">Вопросы и ответы</a></li>
               </ul>
             </div>
-            <div class="col-auto"><a class="link-gold" type="button"><img class="mr-10" src="img/icons/logout.svg" alt="Войти"/><span class="d-none d-md-inline">Выйти</span></a>
+            <div class="col-auto"><a class="header-link" type="button"><img class="mr-10" src="img/icons/logout.svg" alt="Войти"/><span class="d-none d-md-inline">Евгения</span></a>
             </div>
           </div>
         </div>
       </header>
-      <div class="container mt-40 mt-lg-60">
+      <div class="container mt-120 mt-lg-160">
         <div class="row">
           <div class="col"> 
             <h1 class="text-center c-dark-blue">Личный кабинет</h1>
@@ -57,35 +58,205 @@
         </ul>
         <div class="row">
           <div class="tab-content">
-            <div class="tab-pane fade lk-content" id="tab-1">
+            <div class="tab-pane fade lk-content active show" id="tab-1">
               <div class="row"> 
                 <div class="col-12"> 
                   <h2 class="text-center c-white">Зарегистрировать чек</h2>
                 </div>
-              </div>
-              <div class="row"> 
-                <div class="col-12 gold text-center mb-40">
-                  <div class="lk-step"> 
-                    <div class="lk-step-box">Шаг 1. Загрузите фото</div>
+                <form class="col-12 mt-24 mt-md-40 needs-validation" id="formChequeReg" novalidate>
+                  <div class="row" id="step-1"> 
+                    <div class="col-12 mb-24 mb-md-40">
+                      <div class="lk-step"> 
+                        <div class="lk-step-box">Шаг 1. Загрузите фото</div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="file-upload">
+                        <input class="bootstrap-file-upload" type="file" data-browse-on-zone-click="true">
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-24 mt-xl-0">
+                      <p class="par-20 c-white"> К регистрации в Акции принимаются чеки, если:</p>
+                      <ul class="mt-16">
+                        <li class="li-lk">фото чека качественное, чек сфотографирован полностью, не стоит загружать фотографию только QR кода</li>
+                        <li class="li-lk">данные, указанные на чеке, такие как дата покупки, время покупки, итого по сумме чека, №ФН, №ФД, №ФПД введены правильно</li>
+                        <li class="li-lk">кассовый чек должен быть выбит кассиром в период c 22.07.2024 по 30.09.2024</li>
+                        <li class="li-lk">все символы должны быть четко видны</li>
+                        <li class="li-lk">наличие QR-кода на кассовом чеке обязательно, он должен быть читаемый</li>
+                        <li class="li-lk">в чеке должно отображаться наименование Акционной продукции</li>
+                      </ul>
+                    </div>
+                    <div class="col-12 mt-24 mt-md-40"> 
+                      <p class="par-20 text-center c-white">Срок проверки чека - в течение 3-х рабочих дней!</p>
+                    </div>
+                    <div class="col-12 mt-24 mt-md-40">     
+                      <button class="btn btn-white w-auto mx-a">Далее</button>
+                    </div>
                   </div>
-                </div>
+                  <div class="row mt-40" id="step-2">
+                    <div class="col-12 mb-40">
+                      <div class="lk-step"> 
+                        <div class="lk-step-box">Шаг 2. Внесите данные с чека</div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <ul class="nav nav-lk-regChek">
+                        <li class="nav-lk-item"><a class="nav-lk-regChek-link active" href="#tabPhoto" data-bs-toggle="tab">Фото</a></li>
+                        <li class="nav-lk-item"><a class="nav-lk-regChek-link" href="#tabVideo" data-bs-toggle="tab">Камера</a></li>
+                      </ul>
+                    </div>
+                    <div class="col-12">
+                      <div class="tab-content">
+                        <div class="tab-pane fade active show" id="tabPhoto"></div>
+                        <div class="tab-pane fade" id="tabVideo"></div>
+                      </div>
+                    </div>
+                    <div class="col-12"> 
+                      <p class="par-20 text-center c-white mt-24 mt-md-40">В режиме «Фото» увеличьте изображение QR-кода для автоматического распознавания параметров чека. Или в режиме «Камера» наведите на область QR-кода для автоматического распознавания параметров чека</p>
+                    </div>
+                    <div class="col-12 mt-40 mt-md-60">
+                      <h4 class="c-white text-center"> Если QR-код не распознается и фискальные признаки не считываются автоматически, то введите данные вручную</h4>
+                      <div class="d-flex justify-content-center mt-24 mt-md-40"><a class="fiskal-link mx-a" type="button" data-bs-toggle="modal" data-bs-target="#modal-fiskal">Где найти фискальные данные на&nbsp;чеке?</a></div>
+                    </div>
+                    <div class="col-12">
+                      <div class="row px-lg-80 mt-40">
+                        <div class="col-sm-6 mb-12 mb-md-24">
+                          <input class="form-control" type="text" placeholder="ФН" required>
+                          <div class="invalid-feedback">
+                            <div class="c-white">Обязательное поле</div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-12 mb-md-24">
+                          <input class="form-control" type="text" placeholder="ФД" required>
+                          <div class="invalid-feedback">
+                            <div class="c-white">Обязательное поле</div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-12 mb-md-24">
+                          <input class="form-control" type="text" placeholder="ФПД" required>
+                          <div class="invalid-feedback">
+                            <div class="c-white">Обязательное поле</div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-12 mb-md-24">
+                          <input class="form-control" type="text" placeholder="Сумма покупки" required>
+                          <div class="invalid-feedback">
+                            <div class="c-white">Обязательное поле</div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-12 mb-md-24">
+                          <input class="form-control" type="text" placeholder="Дата покупки" required>
+                          <div class="invalid-feedback">
+                            <div class="c-white">Обязательное поле</div>
+                          </div>
+                        </div>
+                        <div class="col-sm-6 mb-12 mb-md-24">
+                          <input class="form-control" type="text" placeholder="Время покупки" required>
+                          <div class="invalid-feedback">
+                            <div class="c-white">Обязательное поле</div>
+                          </div>
+                        </div>
+                        <div class="col-12"> 
+                          <button class="btn btn-white w-100 mx-a" type="submit">Отправить</button>
+                        </div>
+                        <div class="col-md-4"></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
-              <div class="row" id="step-1">
-                <div class="col-12 col-md-5 col-lg-6">
-                  <label class="upload-photo" for="file-receipt"> <img src="img/icons/upload-receipt.svg"/>Загрузить фото чека
-                  </label>
-                  <input id="file-receipt" type="file" accept="image/*">
+              <div class="row mt-60 mt-md-80">
+                <div class="col-12"> 
+                  <h2 class="text-center c-white">Зарегистрированные чеки</h2>
                 </div>
-                <div class="col-12 col-md-7 col-lg-6 mt-24 mt-md-0"> 
-                  <h5 class="gold">К регистрации в Акции принимаются чеки, если:</h5>
-                  <ul>
-                    <li class="li-lk">фото чека качественное, чек сфотографирован полностью, не стоит загружать фотографию только QR кода</li>
-                    <li class="li-lk">данные, указанные на чеке, такие как дата покупки, время покупки, итого по сумме чека, №ФН, №ФД, №ФПД введены правильно</li>
-                    <li class="li-lk">кассовый чек должен быть выбит кассиром в период c 11.10.2021 по 28.11.2021</li>
-                    <li class="li-lk">все символы должны быть четко видны</li>
-                    <li class="li-lk">наличие QR-кода на кассовом чеке обязательно, он должен быть читаемый</li>
-                    <li class="li-lk">в чеке должно отображаться наименование Акционной продукции</li>
-                  </ul>
+                <div class="col-12 mt-16 mt-md-30">
+                  <div class="receved-code-table__wrapper">
+                    <table class="receved-code-table" id="registered-receipts">
+                      <thead>
+                        <tr>
+                          <th class="nowrap date-appl">Дата розыгрыша</th>
+                          <th class="nowrap num-appl">Номер чека</th>
+                          <th class="nowrap date-event">ФН, ФД, ФПД</th>
+                          <th class="nowrap type-event">Фото чека</th>
+                          <th class="status-event">Статус</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_wait">В процессе</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_proof">Подтвержден</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_canceled">Отклонено</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_wait">В процессе</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_wait">В процессе</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_wait">В процессе</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_wait">В процессе</div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>14.12.2023</td>
+                          <td><span class="font-arial"> №</span> 12755246</td>
+                          <td>383732 / 344546 / ......</td>
+                          <td> <a href="img/fiskal.webp" data-fancybox="image">Смотреть</a></td>
+                          <td>
+                            <div class="status status_wait">В процессе</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -198,9 +369,9 @@
               <div class="row"> 
                 <div class="col-12 col-md-6 mt-20 mt-md-30">
                   <div class="lk-prize prize-blocked">
-                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-1.webp" alt="Сертификат"/>
+                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-1.webp" alt="100 рублей на мобильный телефон "/>
                     </div>
-                    <div class="gg my-16"><span>
+                    <div class="prize-desc my-16"><span>
                         <div class="header c-white">100 рублей на мобильный телефон </div>
                         <p class="par-16 c-white mt-12">за регистрацию первого чека</p></span>
                       <p class="par-16 c-white opacity-25 mt-24 mt-lg-12"> Может стать твоим!</p>
@@ -210,13 +381,13 @@
               </div>
               <div class="row mt-40 mt-md-60 mt-lg-80">
                 <div class="col-12"> 
-                  <h2 class="text-center c-white">Гарантированный приз</h2>
+                  <h2 class="text-center c-white">Еженедельные призы</h2>
                 </div>
                 <div class="col-12 col-md-6 mt-20 mt-md-30">
                   <div class="lk-prize prize-blocked"> 
-                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-2.webp" alt="Сертификат"/>
+                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-2.webp" alt="Электронный сертификат в МВидео"/>
                     </div>
-                    <div class="gg my-16"><span>
+                    <div class="prize-desc my-16"><span>
                         <div class="header c-white">Электронный сертификат в МВидео</div>
                         <p class="par-16 c-white mt-12">на 3500 рублей</p></span>
                       <p class="par-16 c-white opacity-25 mt-24 mt-lg-12"> Может стать твоим!</p>
@@ -225,9 +396,9 @@
                 </div>
                 <div class="col-12 col-md-6 mt-20 mt-md-30">
                   <div class="lk-prize prize-blocked"> 
-                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-3.webp" alt="Сертификат"/>
+                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-3.webp" alt="Электронный сертификат в МВидео"/>
                     </div>
-                    <div class="gg my-16"><span>
+                    <div class="prize-desc my-16"><span>
                         <div class="header c-white">Электронный сертификат в МВидео</div>
                         <p class="par-16 c-white mt-12">на 1000 рублей</p></span>
                       <p class="par-16 c-white opacity-25 mt-24 mt-lg-12"> Может стать твоим!</p>
@@ -236,9 +407,9 @@
                 </div>
                 <div class="col-12 col-md-6 mt-20 mt-md-30">
                   <div class="lk-prize prize-blocked"> 
-                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-4.webp" alt="Сертификат"/>
+                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-4.webp" alt="Электронный сертификат в МВидео"/>
                     </div>
-                    <div class="gg my-16"><span>
+                    <div class="prize-desc my-16"><span>
                         <div class="header c-white">Электронный сертификат в МВидео</div>
                         <p class="par-16 c-white mt-12">на 500 рублей</p></span>
                       <p class="par-16 c-white opacity-25 mt-24 mt-lg-12"> Может стать твоим!</p>
@@ -248,23 +419,23 @@
               </div>
               <div class="row mt-40 mt-md-60 mt-lg-80">
                 <div class="col-12"> 
-                  <h2 class="text-center c-white">ежемесячные призы</h2>
+                  <h2 class="text-center c-white">Ежемесячные призы</h2>
                 </div>
                 <div class="col-12 col-md-6 mt-20 mt-md-30">
                   <div class="lk-prize prize-blocked"> 
-                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-5.webp" alt="Сертификат"/>
+                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-5.webp" alt="Мультиварка REDMOND RMC-M95"/>
                     </div>
-                    <div class="gg my-16"><span>
-                        <div class="header c-white">Мультиварка REDMOND RMC-M95</div></span>
+                    <div class="prize-desc my-16"><span>
+                        <div class="header c-white">Мультиварка <br> REDMOND RMC-M95</div></span>
                       <p class="par-16 c-white opacity-25 mt-24 mt-lg-12"> Может стать твоим!</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 col-md-6 mt-20 mt-md-30">
                   <div class="lk-prize prize-blocked"> 
-                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-6.webp" alt="Сертификат"/>
+                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-6.webp" alt="Бокс для романтических вечеров"/>
                     </div>
-                    <div class="gg my-16"><span>
+                    <div class="prize-desc my-16"><span>
                         <div class="header c-white">Бокс для романтических вечеров</div>
                         <p class="par-16 c-white mt-12">(набор бокалов и сырная дощечка)</p></span>
                       <p class="par-16 c-white opacity-25 mt-24 mt-lg-12"> Может стать твоим!</p>
@@ -273,9 +444,9 @@
                 </div>
                 <div class="col-12 col-md-6 mt-20 mt-md-30">
                   <div class="lk-prize prize-blocked"> 
-                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-7.webp" alt="Сертификат"/>
+                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-7.webp" alt="Бокс для пикника"/>
                     </div>
-                    <div class="gg my-16"><span>
+                    <div class="prize-desc my-16"><span>
                         <div class="header c-white">Бокс для пикника</div>
                         <p class="par-16 c-white mt-12">(плед, рюкзак, термокружка)</p></span>
                       <p class="par-16 c-white opacity-25 mt-24 mt-lg-12"> Может стать твоим!</p>
@@ -285,13 +456,13 @@
               </div>
               <div class="row mt-40 mt-md-60 mt-lg-80">
                 <div class="col-12"> 
-                  <h2 class="text-center c-white">главные призы</h2>
+                  <h2 class="text-center c-white">Главные призы</h2>
                 </div>
                 <div class="col-12 col-md-6 mt-20 mt-md-30">
                   <div class="lk-prize prize-blocked"> 
-                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-8.webp" alt="Сертификат"/>
+                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-8.webp" alt="iPhone 15"/>
                     </div>
-                    <div class="gg my-16"><span>
+                    <div class="prize-desc my-16"><span>
                         <div class="header c-white">iPhone 15 (256 гб)</div></span>
                       <p class="par-16 c-white opacity-25 mt-24 mt-lg-12"> Может стать твоим!</p>
                     </div>
@@ -299,9 +470,9 @@
                 </div>
                 <div class="col-12 col-md-6 mt-20 mt-md-30">
                   <div class="lk-prize prize-blocked"> 
-                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-6.webp" alt="Сертификат"/>
+                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-6.webp" alt="Бокс для романтических вечеров"/>
                     </div>
-                    <div class="gg my-16"><span>
+                    <div class="prize-desc my-16"><span>
                         <div class="header c-white">Бокс для романтических вечеров</div>
                         <p class="par-16 c-white mt-12">(набор бокалов и сырная дощечка)</p></span>
                       <p class="par-16 c-white opacity-25 mt-24 mt-lg-12"> Может стать твоим!</p>
@@ -310,16 +481,16 @@
                 </div>
                 <div class="col-12 col-md-6 mt-20 mt-md-30">
                   <div class="lk-prize">
-                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-9.webp" alt="Сертификат"/>
+                    <div class="lk-prize-img"><img src="img/lk-prizes/lk-prize-9.webp" alt="Бокс для кулинарных свершений"/>
                     </div>
-                    <div class="gg my-16"><span>
+                    <div class="prize-desc my-16"><span>
                         <div class="header c-white">Бокс для кулинарных свершений</div>
                         <p class="par-16 c-white mt-12">(портативный блендер, набор приборов, фартук)</p></span><a class="to-data-tab mt-24 mt-lg-12" type="button"> Заполнить данные</a></div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade lk-content active show" id="tab-4">
+            <div class="tab-pane fade lk-content" id="tab-4">
               <div class="row"> 
                 <div class="col">
                   <div class="lk-attention"><img src="img/icons/attention.svg"/>
@@ -332,33 +503,33 @@
                   <h2 class="text-center c-white">Персональные данные</h2>
                 </div>
               </div>
-              <div class="row"> 
+              <div class="row mt-24">
                 <div class="col"> 
                   <div class="lk-form"> 
                     <form class="row needs-validation" novalidate>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <input class="form-control" type="text" placeholder="Фамилия" required value="Иванов">
-                        <div class="invalid-feedback">Введите фамилию</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <input class="form-control" type="text" placeholder="Имя" required value="Дмитрий">
-                        <div class="invalid-feedback">Введите имя</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <input class="form-control" type="text" placeholder="Отчество" required value="Алексеевич">
-                        <div class="invalid-feedback">Введите отчество</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <input class="form-control" type="text" placeholder="Дата рождения" data-toggle="datepicker" required value="08.22.2023">
-                        <div class="invalid-feedback">Введите дату рождения</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <input class="form-control mask-phone" placeholder="Номер телефона" required value="88805553535">
-                        <div class="invalid-feedback">Введите номер телефона</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <input class="form-control" type="email" placeholder="E-mail" required value="user@mail.ru">
-                        <div class="invalid-feedback">Введите E-mail</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-12 mb-12 mb-md-24">
                         <button class="btn btn-white w-100 mx-a" type="submit"> <span class="gold">Сохранить данные</span></button>
@@ -375,40 +546,40 @@
                     <form class="row needs-validation mt-40" novalidate>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <input class="form-control" type="number" placeholder="Серия" required>
-                        <div class="invalid-feedback">Введите cерию</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <input class="form-control" type="number" placeholder="Номер" required>
-                        <div class="invalid-feedback">Введите номер</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <input class="form-control" type="text" placeholder="Дата выдачи" data-toggle="datepicker" required>
-                        <div class="invalid-feedback">Введите дату выдачи</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-6 mb-32 position-relative"><span class="info-icon-absolut ml-16" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Заполнять в точности так, как указано в паспорте, включая заглавные буквы и пробелы"><img src="img/icons/info.svg" alt="" width=""/></span>
                         <input class="form-control" type="text" placeholder="Кем выдан" required>
-                        <div class="invalid-feedback">Кто выдал паспорт?</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <p class="par-26 c-white text-center mb-40">Адрес прописки<span class="info-icon ml-16" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Адрес из актуальной прописки или временной регистрации"><img src="img/icons/info.svg" alt="" width=""/></span></p>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <input class="form-control" type="text" placeholder="Населенный пункт" required>
-                        <div class="invalid-feedback">Введите населенный пункт</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <input class="form-control" type="text" placeholder="Улица" required>
-                        <div class="invalid-feedback">Введите улицу</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-4 mb-12 mb-md-24">
                         <input class="form-control" type="number" placeholder="Номер " required>
-                        <div class="invalid-feedback">Введите номер дома</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-4 mb-12 mb-md-24">
                         <input class="form-control" type="number" placeholder="Номер строения" required>
-                        <div class="invalid-feedback">Введите номер строения</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-4 mb-12 mb-md-24">
                         <input class="form-control" type="number" placeholder="Номер квартиры" required>
-                        <div class="invalid-feedback">Введите номер квартиры</div>
+                        <div class="invalid-feedback">Обязательное поле</div>
                       </div>
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <div class="upload-one">
@@ -419,7 +590,6 @@
                       <div class="col-sm-6 mb-12 mb-md-24">
                         <div class="upload-one">
                           <div class="file-subtitle">Фото паспорта, прописка:<span class="info-icon ml-16" data-bs-toggle="tooltip" data-bs-placement="bottom" title="На фото должна быть информация об актуальной регистрации и серия и номер паспорта внизу страницы."><img src="img/icons/info.svg" alt="" width=""/></span></div><input invalid-custom="file-2" class="file" type="file" data-show-preview="false" required data-msg-placeholder="Загрузить файл">
-                          <div class="invalid-feedback" invalid-customs="file-2">Загрузите фото</div>
                         </div>
                       </div>
                       <div class="col-sm-6 mb-12 mb-md-24">
@@ -430,7 +600,7 @@
                       </div>
                       <div class="col-sm-6 mb-12 mb-md-24 d-flex align-items-end">
                         <input class="form-control" type="number" placeholder="ИНН" required>
-                        <div class="invalid-feedback">Введите ИНН</div>
+                        <div class="invalid-feedback ml-16">Обязательное поле</div>
                       </div>
                       <div class="col-sm-12 mb-12 mb-md-24">
                         <button class="btn btn-white w-100 mx-a" type="submit"> <span class="gold">Сохранить данные</span></button>
@@ -446,16 +616,16 @@
       <div class="container py-60 py-lg-80">
         <div class="row"> 
           <div class="col-12 col-md-6 col-xl-4 d-flex align-items-center justify-content-center flex-column mt-40 mt-xl-0">
-            <h5 class="text-center c-dark-blue"> номер Горячей линии</h5><a class="text-center footer-link-lg mt-2" href="#">8-800-333-40-17</a>
+            <h5 class="text-center c-dark-blue"> номер Горячей линии</h5><a class="text-center footer-link-lg mt-2" href="tel:">8-800-333-40-17</a>
           </div>
           <div class="col-12 col-md-12 col-xl-4 order-first order-xl-0"><a href="/"><img class="logo-img mx-a d-block" src="img/logo.webp" alt="Логотип"/></a></div>
           <div class="col-12 col-md-6 col-xl-4 d-flex align-items-center justify-content-center flex-column mt-40 mt-xl-0">
-            <h5 class="text-center c-dark-blue">  Почта для обратной связи</h5><a class="text-center footer-link-lg mt-2" href="#">info@roklerpromo.ru</a>
+            <h5 class="text-center c-dark-blue">  Почта для обратной связи</h5><a class="text-center footer-link-lg mt-2" href="mailto:">info@roklerpromo.ru</a>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 d-flex align-items-center justify-content-center mt-40">
-            <div class="social-icons"> <a href="#" target="_blank"><img src="img/icons/tg.svg" alt="Youtube"/></a><a href="#" target="_blank"><img src="img/icons/vk.svg" alt="Youtube"/></a><a href="#" target="_blank"><img src="img/icons/odnoklassniki.svg" alt="Youtube"/></a></div>
+            <div class="social-icons"> <a href="#" target="_blank"><img src="img/icons/tg.svg" alt="Телеграм"/></a><a href="#" target="_blank"><img src="img/icons/vk.svg" alt="Вконтакте"/></a><a href="#" target="_blank"><img src="img/icons/odnoklassniki.svg" alt="Одноклассники"/></a></div>
           </div>
         </div>
         <div class="row mt-24 mt-lg-40">
@@ -477,14 +647,14 @@
               <form class="row needs-validation mt-40 mt-md-50" novalidate>
                 <div class="col-12 mb-12 mb-md-24">
                   <input class="form-control mask-phone" placeholder="Номер телефона" required>
-                  <div class="invalid-feedback">Введите номер телефона</div>
+                  <div class="invalid-feedback">Обязательное поле</div>
                 </div>
                 <div class="col-12 mb-12 mb-md-24">
                   <input class="form-control" type="password" placeholder="Пароль" required>
-                  <div class="invalid-feedback">Введите пароль</div><a class="js-change-modal modal-link text-end mt-30" href="#modal-recovery">Забыли пароль? </a>
+                  <div class="invalid-feedback">Обязательное поле</div><a class="js-change-modal modal-link text-end mt-30" href="#modal-recovery">Забыли пароль? </a>
                 </div>
                 <div class="col-12 mt-30 mt-md-50">
-                  <button class="btn btn-white w-100 px-0" type="submit"> Войти </button>
+                  <button class="btn btn-white w-100 mx-a" type="submit"> Войти </button>
                 </div>
               </form>
               <div class="row mt-30 mt--md-60">
@@ -506,50 +676,50 @@
               <form class="row needs-validation mt-40 mt-md-50" novalidate>
                 <div class="col-sm-6 mb-12 mb-md-24">
                   <input class="form-control" type="text" placeholder="Фамилия" required>
-                  <div class="invalid-feedback">Введите фамилию</div>
+                  <div class="invalid-feedback">Обязательное поле</div>
                 </div>
                 <div class="col-sm-6 mb-12 mb-md-24">
                   <input class="form-control" type="text" placeholder="Имя" required>
-                  <div class="invalid-feedback">Введите имя</div>
+                  <div class="invalid-feedback">Обязательное поле</div>
                 </div>
                 <div class="col-sm-6 mb-12 mb-md-24">
                   <input class="form-control" type="text" placeholder="Дата рождения" data-toggle="datepicker" required>
-                  <div class="invalid-feedback">Введите дату рождения</div>
+                  <div class="invalid-feedback">Обязательное поле</div>
                 </div>
                 <div class="col-sm-6 mb-12 mb-md-24">
                   <input class="form-control" type="text" placeholder="Город проживания" required>
-                  <div class="invalid-feedback">Введите дату город проживания</div>
+                  <div class="invalid-feedback">Обязательное поле</div>
                 </div>
                 <div class="col-sm-6 mb-12 mb-md-24">
                   <input class="form-control mask-phone" placeholder="Номер телефона" required>
-                  <div class="invalid-feedback">Введите номер телефона</div>
+                  <div class="invalid-feedback">Обязательное поле</div>
                 </div>
                 <div class="col-sm-6 mb-12 mb-md-24">
                   <input class="form-control" type="email" placeholder="E-mail" required>
-                  <div class="invalid-feedback">Введите E-mail</div>
+                  <div class="invalid-feedback">Обязательное поле</div>
                 </div>
                 <div class="col-sm-12 mb-6 mt-24">
                   <label class="checkbox">
                     <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Я даю  <a href="#" class="label-text">согласие  </a>на обработку моих персональных данных</span>
-                    <div class="invalid-feedback">Подтвердите согласие с пользовательским соглашением и политикой конфиденциальности</div>
+                    <div class="invalid-feedback">Обязательное поле</div>
                   </label>
                 </div>
                 <div class="col-sm-12 mb-6">
                   <label class="checkbox">
                     <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Я ознакомлен и согласен c <a href="#" class="label-text">пользовательским соглашением </a> и <a href="#" class="label-text">политикой конфиденциальности </a></span>
-                    <div class="invalid-feedback">Подтвердите согласие с правилами акции</div>
+                    <div class="invalid-feedback">Обязательное поле</div>
                   </label>
                 </div>
                 <div class="col-sm-12 mb-6">
                   <label class="checkbox">
                     <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text">Я ознакомлен и согласен с <a href="#" class="label-text">правилами акции </a> </span>
-                    <div class="invalid-feedback">Подтвердите согласие на обработку персональных данных</div>
+                    <div class="invalid-feedback">Обязательное поле</div>
                   </label>
                 </div>
                 <div class="col-sm-12 mb-6">
                   <label class="checkbox">
                     <input class="radio-input mr-10" type="checkbox" required><span class="checkbox__text c-white">Мне уже есть 18 лет </span>
-                    <div class="invalid-feedback">Подтвердите возраст</div>
+                    <div class="invalid-feedback">Обязательное поле</div>
                   </label>
                 </div>
                 <div class="col-12 mt-30 mt-md-50">
@@ -568,18 +738,18 @@
             <div class="modal-body">
               <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
               </button>
-              <div class="modal-title-sm">Восстановление пароля</div>
-              <form class="row needs-validation" novalidate>
+              <div class="modal-title-sm text-center">Восстановление пароля</div>
+              <form class="row needs-validation mt-40 mt-md-50" novalidate>
                 <div class="col-12 mb-12 mb-md-24">
                   <input class="form-control mask-phone" placeholder="Номер телефона" required>
-                  <div class="invalid-feedback">Введите номер телефона</div>
+                  <div class="invalid-feedback">Обязательное поле</div>
                 </div>
                 <div class="col-12 mb-12 mb-md-24">
-                  <button class="btn-lk btn-red w-100 px-0" type="submit"> <span class="gold">Восстановить пароль</span></button>
+                  <button class="btn btn-white w-100 px-0" type="submit"> Восстановить пароль</button>
                 </div>
               </form>
               <div class="row">
-                <div class="col-12"> </div><a class="js-change-modal modal-link-lg text-center" href="#modal-reg"><span class="gold">Войти в кабинет</span></a>
+                <div class="col-12"> <a class="js-change-modal modal-link text-center mt-24" href="#modal-enter">Войти </a></div>
               </div>
             </div>
           </div>
@@ -591,16 +761,12 @@
             <div class="modal-body">
               <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
               </button>
-              <h4 class="text-center"><span class="gold">Вы зарегистрировались <br> в акции!</span></h4>
-              <div class="row mt-12">
-                <div class="col-12"> 
-                  <div class="par-16 text-center c-green-middle fw-bolder">На указанный вами телефон (79008987676) отправлен пароль для доступа в личный кабинет</div>
-                </div>
+              <div class="modal-title-sm text-center">ваша регистрация прошла успешно</div>
+              <div class="col-12 mt-24 mt-30 mt-md-50"> 
+                <p class="par-20 c-white text-center">На указанный номер телефона отправлен новый пароль</p>
               </div>
-              <div class="row mt-24">
-                <div class="col-12"> 
-                  <button class="btn-lk btn-red w-100 px-0 js-change-modal modal-link-lg text-center" href="#modal-enter" type="button"><span class="gold">Войти в кабинет</span></button>
-                </div>
+              <div class="col-12 mt-24 mt-30 mt-md-50">
+                <button class="btn btn-white w-100 mx-a js-change-modal" href="#modal-enter" type="button">Войти в кабинет</button>
               </div>
             </div>
           </div>
@@ -612,16 +778,12 @@
             <div class="modal-body">
               <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
               </button>
-              <div class="modal-title">Спасибо!</div>
-              <div class="row mt-12">
-                <div class="col-12"> 
-                  <div class="par-16 text-center c-green-middle fw-bolder">На указанный номер телефона отправлен новый пароль</div>
-                </div>
+              <div class="modal-title text-center">Спасибо!</div>
+              <div class="col-12 mt-24 mt-30 mt-md-50"> 
+                <p class="par-20 c-white text-center">На указанный номер телефона отправлен новый пароль</p>
               </div>
-              <div class="row mt-24">
-                <div class="col-12"> 
-                  <button class="btn-lk btn-red w-100 px-0 js-change-modal modal-link-lg text-center" href="#modal-enter" type="button"><span class="gold">Войти в кабинет</span></button>
-                </div>
+              <div class="col-12 mt-24 mt-30 mt-md-50">
+                <button class="btn btn-white w-100 mx-a js-change-modal" href="#modal-enter" type="button">Войти в кабинет</button>
               </div>
             </div>
           </div>
@@ -633,8 +795,41 @@
             <div class="modal-body">
               <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close.svg" alt="close-ic"/>
               </button>
-              <h4 class="text-center"><span class="gold">Фискальные знаки на чеке</span><img class="img-fluid mt-24" src="img/fiskal.webp" alt=""/>
+              <h4 class="text-center c-white">Фискальные знаки на чеке<img class="img-fluid mt-24" src="img/fiskal.webp" alt=""/>
               </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="absence-number">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content-info">
+            <div class="modal-body d-flex align-items-start">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close-dark.svg" alt="close-ic"/>
+              </button><img src="img/icons/attention.svg"/>
+              <p class="par-16 ml-24">К сожалению, на данный номер нет зарегистрированного аккаунта. Проверьте, пожалуйста, введенный номер</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="number-already-exists">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content-info">
+            <div class="modal-body d-flex align-items-start">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close-dark.svg" alt="close-ic"/>
+              </button><img src="img/icons/attention.svg"/>
+              <p class="par-16 ml-24">Аккаунт с таким номером телефона уже зарегистрирован, используйте форму восстановления пароля</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="error">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content-info">
+            <div class="modal-body d-flex align-items-start">
+              <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><img src="img/icons/close-dark.svg" alt="close-ic"/>
+              </button><img src="img/icons/attention.svg"/>
+              <p class="par-16 ml-24"> </p>
             </div>
           </div>
         </div>

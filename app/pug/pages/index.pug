@@ -30,7 +30,7 @@ block content
             .row.how-do
                 .col-sm-12.text-center
                     h2.c-white как выиграть приз?
-            .row.d-none.d-xl-flex
+            .row.d-none.d-xl-flex.mt-24
                 .col-md-5
                     ul.nav.w-100.flex-column
                         li.nav-item.align-self-start
@@ -63,143 +63,64 @@ block content
                                 +img("icons/step-1.svg",'','step')
                                 .desc 
                                     .header купи сыр rokler 
-                                    p.par-18.c-dark-blue.mt-30 на сумму не менее 194 ₽ в магазинах на территории Омской и Новосибирской областей
+                                    p.par-18.c-dark-blue.mt-16 на сумму не менее 194 ₽ в магазинах на территории Омской и Новосибирской областей
                                 +img("how-win-prize-1.png",'','prize')
                             #tab-2.tab-pane.fade
                                 +img("icons/step-2.svg",'','step')
                                 .desc 
                                     .header Регистрируй чек 
-                                    p.par-18.c-dark-blue.mt-30 на сайте roklerpromo.ru или через чат-бот в telegram @roklerpromo_bot
-                                    a.btn.btn-blue.mt-30(type="button") Перейти в чат бот
+                                    p.par-18.c-dark-blue.mt-16 на сайте roklerpromo.ru или через чат-бот в telegram @roklerpromo_bot
+                                    a.btn.btn-blue.mt-24(type="button") Перейти в чат бот
                                 +img("how-win-prize-3.png",'','prize')
                             #tab-3.tab-pane.fade
                                 +img("icons/step-3.svg",'','step')
                                 .desc 
                                     .header получай гарантированный приз <br> <span style="font-size:48px">100  </span> руб 
-                                    p.par-18.c-dark-blue.mt-30 на счет мобильного телефона за регистрацию первого чека 
-                                  
+                                    p.par-18.c-dark-blue.mt-16 на счет мобильного телефона за регистрацию первого чека 
+
                                 +img("how-win-prize-4.png",'','prize')
+                            #tab-4.tab-pane.fade
+                                +img("icons/step-4.svg",'','step')
+                                .desc 
+                                    .header выиграй топовый <br> смартфон
+                                    p.par-18.c-dark-blue.mt-16 или другие ценные призы
+                                    a.btn.btn-blue.mt-24(type="button") участвовать в акции
+                                +img("how-win-prize-5.png",'','prize')
+            .row.d-flex.d-xl-none
+                .col-12.d-flex.flex-column
+                    .how-win-desc.mt-16.row 
+                        .col
+                            +img("icons/step-1.svg",'','step')
+                            .desc 
+                                .header купи сыр rokler 
+                                p.par-18.c-dark-blue.mt-16 на сумму не менее 194 ₽ в магазинах на территории Омской и Новосибирской областей
+                            +img("how-win-prize-1.png",'','prize')
+                    .how-win-desc.mt-16.row 
+                        .col
+                            +img("icons/step-2.svg",'','step')
+                            .desc 
+                                .header Регистрируй чек 
+                                p.par-18.c-dark-blue.mt-16 на сайте roklerpromo.ru или через чат-бот в telegram @roklerpromo_bot
+                                a.btn.btn-blue.mt-24(type="button") Перейти в чат бот
+                            +img("how-win-prize-3.png",'','prize')
+                    .how-win-desc.mt-16.row 
+                        .col
+                            +img("icons/step-3.svg",'','step')
+                            .desc 
+                                .header получай <br> гарантированный <br> приз  <span style="font-size:48px">100  </span> руб 
+                                p.par-18.c-dark-blue.mt-16 на счет мобильного телефона за регистрацию первого чека 
+                            +img("how-win-prize-4.png",'','prize')
+                    .how-win-desc.mt-16.row 
+                        .col
+                            +img("icons/step-4.svg",'','step')
+                            .desc 
+                                .header выиграй топовый <br> смартфон
+                                p.par-18.c-dark-blue.mt-16 или другие ценные призы
+                                a.btn.btn-blue.mt-24(type="button") участвовать в акции
+                            +img("how-win-prize-5.png",'','prize')
 
 
 
-    //- .container-fluid.py-80.py-md-100.chat-bot-bg 
-    //-     .container 
-    //-         .row
-    //-             .col
-    //-                 .chat-bot
-    //-                     .row
-    //-                         .col-12.col-md-5 
-    //-                             h3 С чат-ботом <br> участвовать проще!
-    //-                         .col-12.col-md-7  
-    //-                             ol.list-group-numbered
-    //-                                 li.list-group-item.chat-bot__li  <strong>Покупайте </strong> «МахеевЪ» в ТС «Монетка» и сохраняйте чеки с «7» ноября 2023 года по «08» января 2024 года
-    //-                                 li.list-group-item.chat-bot__li  <strong>Сфотографируйте QR-код  </strong> чека и загрузите его на сайте или в чат-бот Telegram <a target="_blank" href="https://t.me/kupi_maheev_bot"> @kupi_maheev_bot. </a>
-    //-                                 li.list-group-item.chat-bot__li  <strong> Найти бот  </strong>  можно по названию @kupi_maheev_bot, отправить любое сообщение в бот и следовать дальнейшим инструкциям.
-
-
-    //- .container
-    //-     .row#prizes
-    //-         .col-sm-12.text-center
-    //-             h2.gold-lg Выигрывайте призы 
-    //-         .col-12.col-sm-6.col-xs-12.col-md-4
-    //-             .prize
-    //-                 +img('prize-1.png','','img-fluid','')
-    //-                 .prize-details  
-    //-                     h4.gold Ежедневные
-    //-                     ul
-    //-                         li.win-prize.par-16 Сертификат 1000 Р в магазин «Монетка»
-    //-         .col-12.col-sm-6.col-xs-12.col-md-4.mt-24.mt-sm-0
-    //-             .prize
-    //-                 +img('prize-2.png','','img-fluid','')
-    //-                 .prize-details 
-    //-                     h4.gold Еженедельные
-    //-                     ul
-    //-                         li.win-prize.par-16 Умная колонка Алиса
-    //-                         li.win-prize.par-16 Пароочиститель KARCHER SC 1 EasyFix
-    //-                         li.win-prize.par-16 Мини проектор
-    //-         .col-12.col-sm-6.col-xs-12.col-md-4.touch-center.mt-24.mt-md-0
-    //-             .prize 
-    //-                 +img('prize-3.png','','img-fluid','')
-    //-                 .prize-details 
-    //-                     h4.gold Ежемесячные
-    //-                     ul
-    //-                         li.win-prize.par-16 Телевизор Яндекс с Алисой диаг 43,
-    //-                         li.win-prize.par-16 Электрогриль Tefal Optigrill
-    //-                         li.win-prize.par-16 Кофемашина брендированная
-
-    //-         .col-12.mt-30.mt-md-70
-    //-             .main-prize
-    //-                 h3.gold.text-center Главный приз «Сертификат» на 
-    //-                 +img('main-prize-main.png','','')
-    //- .container-fluid.green-bg.py-60.py-lg-100#winner 
-    //-     .container
-    //-         .row 
-    //-             .col-sm-12
-    //-                 h2.gold-lg.text-center Победители
-    //-         .row 
-    //-             .col-12.col-lg-8
-    //-                 .winners-nav 
-    //-                     button.table-btn.active(data-prize) 
-    //-                         span.gold Ежедневный
-    //-                     button.table-btn(data-prize)  
-    //-                         span.gold Еженедельный
-    //-                     button.table-btn(data-prize)  
-    //-                         span.gold Суперприз
-    //-             .col-12.col-lg-4.my-30.m-lg-0
-    //-                 .winners-search 
-    //-                     button.winners-search__btn 
-    //-                     input( type="text" aria-controls="winners" id="search" placeholder="поиск по номеру телефона" class="mask-phone")
-    //-         .row
-    //-             .col
-
-    //-                 table#winners 
-    //-                     thead 
-    //-                         tr.trow.th-row 
-    //-                             th.th-column.th-data Дата розыгрыша
-    //-                             th.th-column.th-name Имя
-    //-                             th.th-column.th-city Город
-    //-                             th.th-column.th-phone Номер телефона
-    //-                     tbody 
-    //-                         tr.trow.td-row 
-    //-                             td.t-column.table-date 12.11.2022
-    //-                             td.t-column.table-name В******
-    //-                             td.t-column.table-city Санкт-Петербург
-    //-                             td.t-column.table-phone +7 (999) *** ** 99)
-    //-                         tr.trow.td-row 
-    //-                             td.t-column.table-date 12.11.2022
-    //-                             td.t-column.table-name В******
-    //-                             td.t-column.table-city Санкт-Петербург
-    //-                             td.t-column.table-phone +7 (999) *** ** 99)
-    //-                         tr.trow.td-row 
-    //-                             td.t-column.table-date 12.11.2022
-    //-                             td.t-column.table-name В******
-    //-                             td.t-column.table-city Санкт-Петербург
-    //-                             td.t-column.table-phone +7 (999) *** ** 99)
-    //-                         tr.trow.td-row 
-    //-                             td.t-column.table-date 12.11.2022
-    //-                             td.t-column.table-name В******
-    //-                             td.t-column.table-city Санкт-Петербург
-    //-                             td.t-column.table-phone +7 (999) *** ** 99)
-    //-                         tr.trow.td-row 
-    //-                             td.t-column.table-date 12.11.2022
-    //-                             td.t-column.table-name В******
-    //-                             td.t-column.table-city Санкт-Петербург
-    //-                             td.t-column.table-phone +7 (999) *** ** 99)
-    //-                         tr.trow.td-row 
-    //-                             td.t-column.table-date 12.11.2022
-    //-                             td.t-column.table-name В******
-    //-                             td.t-column.table-city Санкт-Петербург
-    //-                             td.t-column.table-phone +7 (999) *** ** 99)
-    //-                         tr.trow.td-row 
-    //-                             td.t-column.table-date 12.11.2022
-    //-                             td.t-column.table-name В******
-    //-                             td.t-column.table-city Санкт-Петербург
-    //-                             td.t-column.table-phone +7 (999) *** ** 99)
-    //-                         tr.trow.td-row 
-    //-                             td.t-column.table-date 12.11.2022
-    //-                             td.t-column.table-name В******
-    //-                             td.t-column.table-city Санкт-Петербург
-    //-                             td.t-column.table-phone +7 (999) *** ** 99)
 
     .container.pt-40.pt-md-60#prizes
         .row
@@ -252,7 +173,7 @@ block content
                             +img('/prizes/main-prize-2.png','Логотип','main-prize mx-a ')
                             p.par-16.c-white.mt-0.mt-md-20.text-center Бокс для кулинарных свершений
 
-    .container.my-60.my-lg-100
+    .container.mt-60.mt-lg-100#winners
         .blue-box
             .row.py-40.py-md-60
                 .col12.mb-20.mb-md-40
@@ -318,9 +239,9 @@ block content
 
 
 
-    .container #faq
+    .container.mt-60.mt-lg-100#faq
         .row
-            .col-sm-12.mb-20.mb-md-40
+            .col-sm-12.mb-10.mb-md-40
                 h2.c-dark-blue.text-center Вопросы и ответы
             .col-md-6.col-lg-8
                 #faqData.qa-wrapper
@@ -328,7 +249,6 @@ block content
                         .qa-item.default-active.active
                             .qa-title В какие сроки проводится Акция? 
                             .qa-details Период покупки продукции Rokler, регистрации чека на подарки с 22 июля 2024 года 00:00:00 (московское время) по 30 сентября 2024 года 23:59:59 (московское время) включительно.
-
                         .qa-item
                             .qa-title Какой продукт необходимо купить, чтобы принять участие? 
                             .qa-details
@@ -376,5 +296,5 @@ block content
                                 span.checkbox__text Я даю  <a href="#" class="label-text">согласие  </a>на обработку <br> моих персональных данных
                                 .invalid-feedback Обязательное поле
                         .col-sm-12.mb-6
-                            button.btn.btn-yellow.w-100.mt-12(type="submit")  Зарегистрироваться   
+                            button.btn.btn-yellow.w-100.mt-12(type="submit")  задать вопрос
 
